@@ -47,9 +47,13 @@ check_out_library_item
 takes as parameters a patron ID and a library item ID, in that order
 if the specified Patron is not in the Library's members, return "patron not found"
 if the specified LibraryItem is not in the Library's holdings, return "item not found"
+
 if the specified LibraryItem is already checked out, return "item already checked out"
+
 if the specified LibraryItem is on hold by another Patron, return "item on hold by other patron"
+
 otherwise update the LibraryItem's checked_out_by, date_checked_out and location
+
 if the LibraryItem was on hold for this Patron, update requested_by
 update the Patron's checked_out_items
 return "check out successful"
